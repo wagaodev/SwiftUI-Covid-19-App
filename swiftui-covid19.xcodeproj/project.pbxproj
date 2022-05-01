@@ -11,6 +11,7 @@
 		D7C7B2AA281EFACF0083855E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7B2A9281EFACF0083855E /* ContentView.swift */; };
 		D7C7B2AC281EFAD60083855E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C7B2AB281EFAD60083855E /* Assets.xcassets */; };
 		D7C7B2AF281EFAD60083855E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C7B2AE281EFAD60083855E /* Preview Assets.xcassets */; };
+		D7D604EE281F1DDF00595E3F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604ED281F1DDF00595E3F /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D7C7B2A9281EFACF0083855E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D7C7B2AB281EFAD60083855E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7C7B2AE281EFAD60083855E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7D604ED281F1DDF00595E3F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		D7C7B2A6281EFACF0083855E /* swiftui-covid19 */ = {
 			isa = PBXGroup;
 			children = (
+				D7D604EC281F1DB700595E3F /* API */,
 				D7C7B2A7281EFACF0083855E /* swiftui_covid19App.swift */,
 				D7C7B2A9281EFACF0083855E /* ContentView.swift */,
 				D7C7B2AB281EFAD60083855E /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				D7C7B2AE281EFAD60083855E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D7D604EC281F1DB700595E3F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D7D604ED281F1DDF00595E3F /* APIService.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C7B2AA281EFACF0083855E /* ContentView.swift in Sources */,
+				D7D604EE281F1DDF00595E3F /* APIService.swift in Sources */,
 				D7C7B2A8281EFACF0083855E /* swiftui_covid19App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

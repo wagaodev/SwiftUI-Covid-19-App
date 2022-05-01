@@ -1,12 +1,12 @@
-<img src="./public/image.jpeg" alt="exemplo imagem">
+<center><img src="./public/image.jpeg" alt="exemplo imagem">
 
-# COVID-19 Statistics
+<h1> COVID-19 Statistics
 
-- <h5>Este projeto foi criado utilizando SwiftUI e foi utilizado uma API pública.
+ <h4>Este projeto foi criado utilizando SwiftUI e foi utilizado uma API pública
 
-## 🔧 Propósito do App
+<h2>🔧 Propósito do App
 
-- Tem como propósito apresentar estatisticas dos locais referente a ultima pandemia enfrentada.
+<h4> Tem como propósito apresentar estatisticas dos locais referente a ultima pandemia enfrentada.
 
 ## Compatibilidade
 
@@ -14,4 +14,4 @@
 
 ### Quer falar diretamente comigo ?
 
-[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wcfx)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wcfx)</center>

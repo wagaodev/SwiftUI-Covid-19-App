@@ -12,6 +12,7 @@
 		D7C7B2AC281EFAD60083855E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C7B2AB281EFAD60083855E /* Assets.xcassets */; };
 		D7C7B2AF281EFAD60083855E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C7B2AE281EFAD60083855E /* Preview Assets.xcassets */; };
 		D7D604EE281F1DDF00595E3F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604ED281F1DDF00595E3F /* APIService.swift */; };
+		D7D604F0281F248E00595E3F /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604EF281F248E00595E3F /* TotalData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		D7C7B2AB281EFAD60083855E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7C7B2AE281EFAD60083855E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7D604ED281F1DDF00595E3F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D7D604EF281F248E00595E3F /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				D7C7B2A9281EFACF0083855E /* ContentView.swift */,
 				D7C7B2AB281EFAD60083855E /* Assets.xcassets */,
 				D7C7B2AD281EFAD60083855E /* Preview Content */,
+				D7D604EF281F248E00595E3F /* TotalData.swift */,
 			);
 			path = "swiftui-covid19";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D604F0281F248E00595E3F /* TotalData.swift in Sources */,
 				D7C7B2AA281EFACF0083855E /* ContentView.swift in Sources */,
 				D7D604EE281F1DDF00595E3F /* APIService.swift in Sources */,
 				D7C7B2A8281EFACF0083855E /* swiftui_covid19App.swift in Sources */,

@@ -13,7 +13,7 @@ final class APIService {
   private init () { }
 
   private let headers = [
-    "X-RapidAPI-Host": "covid-19-statistics.p.rapidapi.com",
+    "X-RapidAPI-Host": ProcessInfo.processInfo.environment["RAPID_API_HOST"]
     "X-RapidAPI-Key": ProcessInfo.processInfo.environment["RAPID_API_KEY"]
   ]
 

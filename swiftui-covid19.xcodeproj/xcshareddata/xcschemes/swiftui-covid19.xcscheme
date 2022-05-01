@@ -56,6 +56,11 @@
             value = "dca3493c88msh23d808d6828b0d4p1382bcjsn6694cbbd71a7"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "RAPID_API_HOST"
+            value = "covid-19-statistics.p.rapidapi.com"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction

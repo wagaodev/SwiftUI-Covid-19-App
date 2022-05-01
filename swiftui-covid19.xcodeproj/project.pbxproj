@@ -55,12 +55,12 @@
 		D7C7B2A6281EFACF0083855E /* swiftui-covid19 */ = {
 			isa = PBXGroup;
 			children = (
+				D7D604F1281F2FAA00595E3F /* Model */,
 				D7D604EC281F1DB700595E3F /* API */,
 				D7C7B2A7281EFACF0083855E /* swiftui_covid19App.swift */,
 				D7C7B2A9281EFACF0083855E /* ContentView.swift */,
 				D7C7B2AB281EFAD60083855E /* Assets.xcassets */,
 				D7C7B2AD281EFAD60083855E /* Preview Content */,
-				D7D604EF281F248E00595E3F /* TotalData.swift */,
 			);
 			path = "swiftui-covid19";
 			sourceTree = "<group>";
@@ -79,6 +79,14 @@
 				D7D604ED281F1DDF00595E3F /* APIService.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		D7D604F1281F2FAA00595E3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7D604EF281F248E00595E3F /* TotalData.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -14,7 +14,7 @@ final class APIService {
 
   private let headers = [
     "X-RapidAPI-Host": "covid-19-statistics.p.rapidapi.com",
-    "X-RapidAPI-Key": ProcessInfo.processInfo.environment["RAPID_API_KEY"]
+    "X-RapidAPI-Key": ProcessInfo.processInfo.environment["RAPID_API_KEY"]!
   ]
 
   private let baseURLString = "https://covid-19-statistics.p.rapidapi.com"
@@ -23,24 +23,36 @@ final class APIService {
 
       let totalURLString = baseURLString + "/reports/total"
       let url = URL(string: totalURLString)
-      guard let url = url else { return }
+      guard let url = url else {
+        completion(.failure(CovidError.incorrectURL))
+        return
 
-      let request = NSMutableURLRequest(url: NSURL(string: totalURLString)! as URL,
-                                              cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
+      }
+
+    var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+
       request.httpMethod = "GET"
       request.allHTTPHeaderFields = headers
 
       let session = URLSession.shared
-      let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-        if (error != nil) {
-          print(error)
+
+      let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+        if error != nil {
+          completion(.failure(CovidError.noDataReceived))
         } else {
-          let httpResponse = response as? HTTPURLResponse
-          print(httpResponse)
+//          if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+//            print("DEBUG: Data response \(json)")
+          let decoder = JSONDecoder()
+
+          do {
+            let totalDataObject = try decoder.decode(TotalDataObject.self, from: data!)
+            completion(.success(totalDataObject.data))
+          }catch let error{
+            completion(.failure(error))
+          }
         }
       })
 
       dataTask.resume()
   }
-
+}

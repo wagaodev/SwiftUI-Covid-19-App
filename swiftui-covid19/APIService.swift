@@ -10,17 +10,22 @@ import Foundation
 final class APIService {
   static let shared = APIService()
 
-  private init () {
+  private init () { }
 
-    private let headers = [
-      "X-RapidAPI-Host": "covid-19-statistics.p.rapidapi.com",
-      "X-RapidAPI-Key": "dca3493c88msh23d808d6828b0d4p1382bcjsn6694cbbd71a7"
-    ]
+  private let headers = [
+    "X-RapidAPI-Host": ProcessInfo.processInfo.environment["RAPID_API_HOST"]
+    "X-RapidAPI-Key": ProcessInfo.processInfo.environment["RAPID_API_KEY"]
+  ]
 
-    func fetchTotalData(){
+  private let baseURLString = "https://covid-19-statistics.p.rapidapi.com"
 
+  func fetchTotalData(completion: @escaping (Result<TotalData, Error>) -> Void){
 
-      let request = NSMutableURLRequest(url: NSURL(string: "https://covid-19-statistics.p.rapidapi.com/regions")! as URL,
+      let totalURLString = baseURLString + "/reports/total"
+      let url = URL(string: totalURLString)
+      guard let url = url else { return }
+
+      let request = NSMutableURLRequest(url: NSURL(string: totalURLString)! as URL,
                                               cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
       request.httpMethod = "GET"
@@ -37,6 +42,5 @@ final class APIService {
       })
 
       dataTask.resume()
-    }
   }
-}
+

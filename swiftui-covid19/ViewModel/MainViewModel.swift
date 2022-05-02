@@ -27,7 +27,7 @@ final class MainViewModel: ObservableObject {
             self.totalData = totalData
           case .failure(_):
             print("DEBUG: Error total data...")
-            //TODO: Create an error
+            // TODO: Create an error
         }
       }
 

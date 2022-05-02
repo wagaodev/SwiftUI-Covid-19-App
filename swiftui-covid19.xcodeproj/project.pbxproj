@@ -17,6 +17,9 @@
 		D7D604F8281F383200595E3F /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604F7281F383200595E3F /* Region.swift */; };
 		D7D604FA281F4A9100595E3F /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604F9281F4A9100595E3F /* Report.swift */; };
 		D7D604FD281F5D0F00595E3F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604FC281F5D0F00595E3F /* MainViewModel.swift */; };
+		D7D604FF281F7B5C00595E3F /* DataCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604FE281F7B5C00595E3F /* DataCardView.swift */; };
+		D7D60502281F7B9400595E3F /* TotalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D60501281F7B9400595E3F /* TotalDataView.swift */; };
+		D7D60504281F93BB00595E3F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D60503281F93BB00595E3F /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		D7D604F7281F383200595E3F /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		D7D604F9281F4A9100595E3F /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		D7D604FC281F5D0F00595E3F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D7D604FE281F7B5C00595E3F /* DataCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCardView.swift; sourceTree = "<group>"; };
+		D7D60501281F7B9400595E3F /* TotalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDataView.swift; sourceTree = "<group>"; };
+		D7D60503281F93BB00595E3F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		D7C7B2A6281EFACF0083855E /* swiftui-covid19 */ = {
 			isa = PBXGroup;
 			children = (
+				D7D60500281F7B6300595E3F /* Components */,
 				D7D604FB281F5D0000595E3F /* ViewModel */,
 				D7D604F5281F336C00595E3F /* View */,
 				D7D604F2281F30BC00595E3F /* Utils */,
@@ -105,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D7D604F3281F30C500595E3F /* CustomError.swift */,
+				D7D60503281F93BB00595E3F /* Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -131,6 +139,15 @@
 				D7D604FC281F5D0F00595E3F /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7D60500281F7B6300595E3F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D7D604FE281F7B5C00595E3F /* DataCardView.swift */,
+				D7D60501281F7B9400595E3F /* TotalDataView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +224,13 @@
 				D7D604F0281F248E00595E3F /* TotalData.swift in Sources */,
 				D7D604FA281F4A9100595E3F /* Report.swift in Sources */,
 				D7C7B2AA281EFACF0083855E /* MainView.swift in Sources */,
+				D7D60504281F93BB00595E3F /* Extension.swift in Sources */,
 				D7D604F8281F383200595E3F /* Region.swift in Sources */,
+				D7D60502281F7B9400595E3F /* TotalDataView.swift in Sources */,
 				D7D604EE281F1DDF00595E3F /* APIService.swift in Sources */,
 				D7C7B2A8281EFACF0083855E /* swiftui_covid19App.swift in Sources */,
 				D7D604FD281F5D0F00595E3F /* MainViewModel.swift in Sources */,
+				D7D604FF281F7B5C00595E3F /* DataCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

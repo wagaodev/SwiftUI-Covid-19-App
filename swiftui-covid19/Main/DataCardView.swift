@@ -18,11 +18,11 @@ struct DataCardView: View {
     GeometryReader { geometry in
       VStack(spacing: 10){
         Text(self.number)
-          .font(.subheadline)
+          .font(.title3)
           .foregroundColor(self.color)
 
         Text(self.name)
-          .font(.body)
+          .font(.title3)
           .foregroundColor(self.color)
       }
       .frame(width: geometry.size.width, height: 80, alignment: .center)

@@ -43,8 +43,6 @@ final class APIService {
         if error != nil {
           completion(.failure(CovidError.noDataReceived))
         } else {
-//          if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
-//            print("DEBUG: Data response \(json)")
           let decoder = JSONDecoder()
 
           do {

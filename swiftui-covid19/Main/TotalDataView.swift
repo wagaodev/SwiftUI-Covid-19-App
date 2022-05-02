@@ -15,7 +15,7 @@ struct TotalDataView: View {
     VStack {
       HStack {
         DataCardView(number: totalData.confirmed.formatNumber, name: "Confirmados")
-        DataCardView(number: totalData.active.formatNumber, name: "Ativos", color: .green)
+        DataCardView(number: totalData.active.formatNumber, name: "Ativos", color: .blue)
       }
       HStack {
         DataCardView(number: totalData.deaths.formatNumber, name: "Mortes", color: .red)

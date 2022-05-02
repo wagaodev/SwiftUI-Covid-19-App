@@ -23,12 +23,14 @@ struct MainView: View {
           .ignoresSafeArea()
 
           VStack(alignment: .leading){
-            Text("Contagem Global")
+            Text("Numero de casos")
               .font(.title2.bold())
               .foregroundColor(.white)
               .padding(10)
 
             TotalDataView(totalData: viewModel.totalData)
+
+            viewModel.isSearchVisible ? SearchBarView(searchText: $viewModel.searchText) : nil
 
             Text("Todos os países")
               .font(.title2.bold())
@@ -37,26 +39,34 @@ struct MainView: View {
 
             List {
               Section {
-                ForEach(viewModel.allCountries, id: \.iso) { country in
-                  Text(country.name)
+                ForEach(viewModel.allCountries.filter {
+                  viewModel.searchText.isEmpty ? true :
+                  $0.name.lowercased().contains(viewModel.searchText.lowercased())
+                }, id: \.iso) { country in
+                  NavigationLink(destination: Text("Hello")){
+                    Text(country.name)
+                  }
                 }
               }
             }
+
+            .listStyle(.plain)
           }
         }
-        .navigationTitle("Estatisticas")
+        .navigationTitle("Estatisticas Global")
 
         .toolbar {
           Button {
-            print("DEBUG: Show Search...")
+            viewModel.isSearchVisible.toggle()
+            if !viewModel.isSearchVisible {
+              viewModel.searchText = ""
+            }
           } label: {
             Image(systemName: "magnifyingglass")
           }
           .tint(.white)
         }
-        
-
-
+        .accentColor(.white)
       }
     }
 }

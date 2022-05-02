@@ -17,10 +17,17 @@ struct MainView: View {
         ZStack(alignment: .top) {
 
           LinearGradient(colors: [
-            Color(red: 0.212, green: 249, blue: 255),
-            Color(red: 0.88, green: 0, blue: 130)
-          ], startPoint: .bottomTrailing, endPoint: .topLeading)
+            Color(red: 0.125, green: 0.35, blue: 0.25),
+            Color(red: 0.40, green: 0.44, blue: 0.99)
+          ], startPoint: .topLeading, endPoint: .bottomTrailing)
           .ignoresSafeArea()
+
+          VStack(alignment: .leading){
+            Text("World Total")
+              .font(.title2.bold())
+              .foregroundColor(.white)
+              .padding(10)
+          }
         }
       }
     }

@@ -1,6 +1,6 @@
-<center><img src="./public/image.jpeg" alt="exemplo imagem">
-
-<h1> COVID-19 Statistics
+<center><h1>SWIFT APP COVID-19 STATUS</center>
+<br>
+<center><img width="300" src="./public/device.png" alt="exemplo imagem">
 
  <h4>Este projeto foi criado utilizando SwiftUI e foi utilizado uma API pública
 

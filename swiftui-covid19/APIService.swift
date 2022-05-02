@@ -91,38 +91,40 @@ final class APIService {
       dataTask.resume()
   }
 
-//  func fetchAllRegions(completion: @escaping (Result<[Country], Error>) -> Void){
-//
-//      let countriesURLString = baseURLString + "/regions"
-//      let url = URL(string: countriesURLString)
-//      guard let url = url else {
-//        completion(.failure(CovidError.incorrectURL))
-//        return
-//
-//      }
-//
-//    var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-//
-//      request.httpMethod = "GET"
-//      request.allHTTPHeaderFields = headers
-//
-//      let session = URLSession.shared
-//
-//      let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
-//        if error != nil {
-//          completion(.failure(CovidError.noDataReceived))
-//        } else {
-//          let decoder = JSONDecoder()
-//
-//          do {
-//            let allCountries = try decoder.decode(AllRegions.self, from: data!)
-//            completion(.success(allCountries.data))
-//          }catch let error{
-//            completion(.failure(error))
-//          }
-//        }
-//      })
-//
-//      dataTask.resume()
-//  }
+  func fetchReport(for iso: String, completion: @escaping (Result<[RegionReport], Error>) -> Void){
+
+      let reportsURLString = baseURLString + "/reports?iso=\(iso)"
+      let url = URL(string: reportsURLString)
+      guard let url = url else {
+        completion(.failure(CovidError.incorrectURL))
+        return
+
+      }
+
+    var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+
+      request.httpMethod = "GET"
+      request.allHTTPHeaderFields = headers
+
+      let session = URLSession.shared
+
+      let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+        if error != nil {
+          completion(.failure(CovidError.noDataReceived))
+        } else {
+          let decoder = JSONDecoder()
+          let formatter = DateFormatter()
+          formatter.dateFormat = "y-MM-dd"
+          decoder.dateDecodingStrategy = .formatted(formatter)
+          do {
+            let allReports = try decoder.decode(AllReports.self, from: data!)
+            completion(.success(allReports.data))
+          }catch let error{
+            completion(.failure(error))
+          }
+        }
+      })
+
+      dataTask.resume()
+  }
 }

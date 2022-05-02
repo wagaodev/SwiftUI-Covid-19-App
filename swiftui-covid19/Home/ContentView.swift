@@ -12,10 +12,11 @@ struct ContentView: View {
         Text("Hello, world!")
             .padding()
             .onAppear {
-              APIService.shared.fetchAllRegions{ result in
+              APIService.shared.fetchReport(for: "BGR"){ result in
                 switch result {
-                  case .success(let allCountries):
-                    print(allCountries.count)
+                  case .success(let region):
+                    print(region.count)
+                    print(region.first!.formattedDate)
                   case .failure(let error):
                     print(error.localizedDescription)
                 }

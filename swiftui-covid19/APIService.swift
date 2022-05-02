@@ -12,12 +12,15 @@ final class APIService {
 
   private init () { }
 
+
   private let headers = [
     "X-RapidAPI-Host": "covid-19-statistics.p.rapidapi.com",
     "X-RapidAPI-Key": ProcessInfo.processInfo.environment["RAPID_API_KEY"]!
   ]
 
   private let baseURLString = "https://covid-19-statistics.p.rapidapi.com"
+
+  // MARK: - FetchTotalData
 
   func fetchTotalData(completion: @escaping (Result<TotalData, Error>) -> Void){
 
@@ -40,8 +43,6 @@ final class APIService {
         if error != nil {
           completion(.failure(CovidError.noDataReceived))
         } else {
-//          if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
-//            print("DEBUG: Data response \(json)")
           let decoder = JSONDecoder()
 
           do {
@@ -55,6 +56,8 @@ final class APIService {
 
       dataTask.resume()
   }
+
+  // MARK: - FetchAllRegions
 
   func fetchAllRegions(completion: @escaping (Result<[Country], Error>) -> Void){
 
@@ -90,6 +93,7 @@ final class APIService {
 
       dataTask.resume()
   }
+  // MARK: - FetchReport
 
   func fetchReport(for iso: String, completion: @escaping (Result<[RegionReport], Error>) -> Void){
 

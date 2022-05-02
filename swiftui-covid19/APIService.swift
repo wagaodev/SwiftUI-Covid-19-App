@@ -19,6 +19,8 @@ final class APIService {
 
   private let baseURLString = "https://covid-19-statistics.p.rapidapi.com"
 
+  // MARK: - FetchTotalData
+
   func fetchTotalData(completion: @escaping (Result<TotalData, Error>) -> Void){
 
       let totalURLString = baseURLString + "/reports/total"
@@ -56,6 +58,8 @@ final class APIService {
       dataTask.resume()
   }
 
+  // MARK: - FetchAllRegions
+
   func fetchAllRegions(completion: @escaping (Result<[Country], Error>) -> Void){
 
       let countriesURLString = baseURLString + "/regions"
@@ -90,6 +94,7 @@ final class APIService {
 
       dataTask.resume()
   }
+  // MARK: - FetchReport
 
   func fetchReport(for iso: String, completion: @escaping (Result<[RegionReport], Error>) -> Void){
 

@@ -14,14 +14,16 @@ struct TotalDataView: View {
   var body: some View {
     VStack {
       HStack {
-        DataCardView(number: totalData.confirmed, name: "Confirmados")
-        DataCardView(number: totalData.active, name: "Ativos", color: .green)
+        DataCardView(number: totalData.confirmed.formatNumber, name: "Confirmados")
+        DataCardView(number: totalData.active.formatNumber, name: "Ativos", color: .green)
       }
       HStack {
-        DataCardView(number: totalData.deaths, name: "Mortes", color: .red)
+        DataCardView(number: totalData.deaths.formatNumber, name: "Mortes", color: .red)
         DataCardView(number: String(format: "%.2f", totalData.fatality_rate), name: "% de mortes", color: .red)
       }
     }
+    .frame(height: 170)
+    .padding(10)
   }
 }
 

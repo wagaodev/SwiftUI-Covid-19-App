@@ -8,7 +8,7 @@
 import Foundation
 
 extension Int {
-  func formatNumber() -> String {
+  var formatNumber: String {
     let formatter = NumberFormatter()
     formatter.groupingSeparator = ","
     formatter.numberStyle = .decimal
@@ -22,7 +22,7 @@ extension Int {
     if million >= 1.0 {
       return "\(round(million*10)/10)M"
     }else {
-      return "\(self.formatNumber())"
+      return "\(self.formatNumber)"
     }
   }
 }

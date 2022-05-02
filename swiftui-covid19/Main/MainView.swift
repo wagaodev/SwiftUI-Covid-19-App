@@ -23,10 +23,12 @@ struct MainView: View {
           .ignoresSafeArea()
 
           VStack(alignment: .leading){
-            Text("World Total")
+            Text("Contagem Global")
               .font(.title2.bold())
               .foregroundColor(.white)
               .padding(10)
+
+            TotalDataView(totalData: viewModel.totalData)
           }
         }
       }

@@ -13,6 +13,9 @@
 		D7C7B2AF281EFAD60083855E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C7B2AE281EFAD60083855E /* Preview Assets.xcassets */; };
 		D7D604EE281F1DDF00595E3F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604ED281F1DDF00595E3F /* APIService.swift */; };
 		D7D604F0281F248E00595E3F /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604EF281F248E00595E3F /* TotalData.swift */; };
+		D7D604F4281F30C500595E3F /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604F3281F30C500595E3F /* CustomError.swift */; };
+		D7D604F8281F383200595E3F /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604F7281F383200595E3F /* Region.swift */; };
+		D7D604FA281F4A9100595E3F /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D604F9281F4A9100595E3F /* Report.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		D7C7B2AE281EFAD60083855E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7D604ED281F1DDF00595E3F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		D7D604EF281F248E00595E3F /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
+		D7D604F3281F30C500595E3F /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		D7D604F7281F383200595E3F /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		D7D604F9281F4A9100595E3F /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +61,13 @@
 		D7C7B2A6281EFACF0083855E /* swiftui-covid19 */ = {
 			isa = PBXGroup;
 			children = (
+				D7D604F5281F336C00595E3F /* View */,
+				D7D604F2281F30BC00595E3F /* Utils */,
+				D7D604F1281F2FAA00595E3F /* Model */,
 				D7D604EC281F1DB700595E3F /* API */,
 				D7C7B2A7281EFACF0083855E /* swiftui_covid19App.swift */,
-				D7C7B2A9281EFACF0083855E /* ContentView.swift */,
 				D7C7B2AB281EFAD60083855E /* Assets.xcassets */,
 				D7C7B2AD281EFAD60083855E /* Preview Content */,
-				D7D604EF281F248E00595E3F /* TotalData.swift */,
 			);
 			path = "swiftui-covid19";
 			sourceTree = "<group>";
@@ -79,6 +86,40 @@
 				D7D604ED281F1DDF00595E3F /* APIService.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		D7D604F1281F2FAA00595E3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7D604EF281F248E00595E3F /* TotalData.swift */,
+				D7D604F7281F383200595E3F /* Region.swift */,
+				D7D604F9281F4A9100595E3F /* Report.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D7D604F2281F30BC00595E3F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D7D604F3281F30C500595E3F /* CustomError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D7D604F5281F336C00595E3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7D604F6281F338800595E3F /* Home */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D7D604F6281F338800595E3F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D7C7B2A9281EFACF0083855E /* ContentView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D604F4281F30C500595E3F /* CustomError.swift in Sources */,
 				D7D604F0281F248E00595E3F /* TotalData.swift in Sources */,
+				D7D604FA281F4A9100595E3F /* Report.swift in Sources */,
 				D7C7B2AA281EFACF0083855E /* ContentView.swift in Sources */,
+				D7D604F8281F383200595E3F /* Region.swift in Sources */,
 				D7D604EE281F1DDF00595E3F /* APIService.swift in Sources */,
 				D7C7B2A8281EFACF0083855E /* swiftui_covid19App.swift in Sources */,
 			);

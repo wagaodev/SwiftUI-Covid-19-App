@@ -19,7 +19,7 @@ struct TotalDataView: View {
       }
       HStack {
         DataCardView(number: totalData.deaths.formatNumber, name: "Mortes", color: .red)
-        DataCardView(number: String(format: "%.2f", totalData.fatality_rate), name: "% de mortes", color: .red)
+        DataCardView(number: String(format: "%.2f", totalData.fatality_rate), name: "Índice de Mortes", color: .red)
       }
     }
     .frame(height: 170)

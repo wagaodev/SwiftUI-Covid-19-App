@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
 
-  @ObservedObject private var viewModel = MainViewModel()
+  @StateObject private var viewModel = MainViewModel()
 
 
     var body: some View {
@@ -43,13 +43,12 @@ struct MainView: View {
                   viewModel.searchText.isEmpty ? true :
                   $0.name.lowercased().contains(viewModel.searchText.lowercased())
                 }, id: \.iso) { country in
-                  NavigationLink(destination: Text("Hello")){
+                  NavigationLink(destination: CountryDetailView(viewModel: CountryDetailViewModel(country: country))){
                     Text(country.name)
                   }
                 }
               }
             }
-
             .listStyle(.plain)
           }
         }
@@ -64,10 +63,10 @@ struct MainView: View {
           } label: {
             Image(systemName: "magnifyingglass")
           }
-          .tint(.white)
         }
-        .accentColor(.white)
+        .tint(.white)
       }
+      .accentColor(.primary)
     }
 }
 

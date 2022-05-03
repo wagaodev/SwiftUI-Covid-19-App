@@ -14,4 +14,6 @@ struct AllRegions: Codable {
 struct Country: Codable {
   let iso: String
   let name: String
+
+  static let initialState = Country(iso: "N/A", name: "Error")
 }

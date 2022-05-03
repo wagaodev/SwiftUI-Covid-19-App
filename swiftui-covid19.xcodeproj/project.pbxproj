@@ -24,6 +24,7 @@
 		D7D60508281FB33500595E3F /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D60507281FB33500595E3F /* CountryDetailView.swift */; };
 		D7D6050B281FB67300595E3F /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6050A281FB67300595E3F /* CountryDetailViewModel.swift */; };
 		D7DF62EA2820BD9B00D8D8DC /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF62E92820BD9B00D8D8DC /* ReportView.swift */; };
+		D7DF62EC2820DCBE00D8D8DC /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF62EB2820DCBE00D8D8DC /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		D7D60507281FB33500595E3F /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
 		D7D6050A281FB67300595E3F /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
 		D7DF62E92820BD9B00D8D8DC /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		D7DF62EB2820DCBE00D8D8DC /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D7D604ED281F1DDF00595E3F /* APIService.swift */,
+				D7DF62EB2820DCBE00D8D8DC /* LocalFileManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				D7D60508281FB33500595E3F /* CountryDetailView.swift in Sources */,
 				D7D60506281FB06700595E3F /* SearchBarView.swift in Sources */,
 				D7D6050B281FB67300595E3F /* CountryDetailViewModel.swift in Sources */,
+				D7DF62EC2820DCBE00D8D8DC /* LocalFileManager.swift in Sources */,
 				D7D60504281F93BB00595E3F /* Extension.swift in Sources */,
 				D7DF62EA2820BD9B00D8D8DC /* ReportView.swift in Sources */,
 				D7D604F8281F383200595E3F /* Region.swift in Sources */,

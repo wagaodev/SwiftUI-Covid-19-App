@@ -61,6 +61,21 @@ final class APIService {
 
   func fetchAllRegions(completion: @escaping (Result<[Country], Error>) -> Void){
 
+    let decoder = JSONDecoder()
+  // MARK: - Check if local data is available
+
+    if let data = LocalFileManager.shared.fetchLocalCountries() {
+
+      do {
+        print("DEBUG: Returning from local data")
+        let allCountries = try decoder.decode(AllRegions.self, from: data)
+        completion(.success(allCountries.data))
+      } catch let error {
+        completion(.failure(error))
+      }
+      return
+    }
+
       let countriesURLString = baseURLString + "/regions"
       let url = URL(string: countriesURLString)
       guard let url = url else {
@@ -80,9 +95,13 @@ final class APIService {
         if error != nil {
           completion(.failure(CovidError.noDataReceived))
         } else {
-          let decoder = JSONDecoder()
+
+    // MARK: - Save Locally
+
+          LocalFileManager.shared.saveCountriesLocally(countryData: data)
 
           do {
+            print("DEBUG: Returning from API...")
             let allCountries = try decoder.decode(AllRegions.self, from: data!)
             completion(.success(allCountries.data))
           }catch let error{
